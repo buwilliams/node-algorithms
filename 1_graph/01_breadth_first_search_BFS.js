@@ -1,4 +1,5 @@
-// https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
+// Original post:
+//      https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/
 
 // Breadth First Traversal (or Search) for a graph is similar to Breadth First 
 // Traversal of a tree (See method 2 of this post). The only catch here is, 
@@ -11,6 +12,10 @@
 // vertex of 0. If we don’t mark visited vertices, then 2 will be processed again 
 // and it will become a non-terminating process. A Breadth First Traversal of 
 // the following graph is 2, 0, 3, 1.
+
+// See also:
+//      Adjacency List: https://www.youtube.com/watch?v=DBRW8nwZV-g
+//                      https://en.wikipedia.org/wiki/Adjacency_list
 
 function bfsOfGraph(V, adj) {
     let answer = []

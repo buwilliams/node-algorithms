@@ -1,6 +1,6 @@
 # Algorithms in node.js
 
-Practice exercises from [GeeksForFeeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions)
+[Top 10 algorithms in Interview Questions from GeeksForFeeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions)
 
 ## Top 10 interview algorithm questions
 

@@ -2,7 +2,7 @@
 
 [Top 10 algorithms in Interview Questions from GeeksForFeeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions)
 
-## Top 10 interview algorithm questions
+## Contents
 
 1. Graph
     1. Breadth First Search (BFS)

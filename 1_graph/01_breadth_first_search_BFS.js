@@ -20,7 +20,6 @@ function bfsOfGraph(V, adj) {
     visited[0] = true;
     queue.push(0)
     
-    
     while(queue.length > 0) {
         let s = queue.shift();
         answer.push(s);

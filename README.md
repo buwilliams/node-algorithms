@@ -2,7 +2,13 @@
 
 [Top 10 algorithms in Interview Questions from GeeksForFeeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions)
 
+This project is meant for practicing Algorithms and Data Structures since:
+- this type of knowledge easily becomes stale or forgotten since it's not usually a day-to-day activity
+- each exercise provides new insights about computer science which keeps programming interesting
+
 ## Run tests
+
+I've created a [simple test framework](./test.ts) for each practice routine which can be executed for any practice example:
 
 ```bash
 > npx ts-node ./1_graph/01_breadth_first_search_BFS.ts

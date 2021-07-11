@@ -17,19 +17,21 @@
 //      Adjacency List: https://www.youtube.com/watch?v=DBRW8nwZV-g
 //                      https://en.wikipedia.org/wiki/Adjacency_list
 
-function bfsOfGraph(V, adj) {
-    let answer = []
+import test from '../test'
+
+function bfsOfGraph(V: number, adj: any[]) {
+    let answer = [];
     let visited = new Array(V).fill(false);
     let queue = [];
     
     visited[0] = true;
-    queue.push(0)
+    queue.push(0);
     
     while(queue.length > 0) {
         let s = queue.shift();
         answer.push(s);
-        for(let i=0; i<adj[s].length; i++) {
-            let n = parseInt(adj[s][i]);
+        for(let i=0; i<adj[s!].length; i++) {
+            let n = parseInt(adj[s!][i]);
             if(!visited[n]) {
                 visited[n] = true;
                 queue.push(n);
@@ -37,15 +39,11 @@ function bfsOfGraph(V, adj) {
         }
     }
     
-    return answer
+    return answer;
 }
 
-function checkEquality(expected, actual) {
-    return JSON.stringify(expected) == JSON.stringify(actual);
-}
-
-function test() {
-    let tests = [
+test(
+    [
         {
             input: [['1', '2', '3' ], [], ['4'], [], []],
             expected: [0, 1, 2, 3, 4]
@@ -54,24 +52,6 @@ function test() {
             input: [['4', '2'], [], [], [], ['3']],
             expected: [0, 4, 2, 3]
         }
-    ]
-
-    let passAll = true;
-
-    for(let i=0; i<tests.length; i++) {
-        let test = tests[i];
-        let testNumber = i+1;
-        let actual = bfsOfGraph(test.input.length, test.input);
-        let pass = checkEquality(test.expected, actual);
-        if(passAll) passAll = pass;
-        console.log(`Test ${testNumber}:`, pass ? 'pass': 'fail', test.expected);
-    }
-
-    if(passAll) {
-        console.log('All tests passed.');
-    } else {
-        console.log('One or more tests failed.');
-    }
-}
-
-test();
+    ],
+    input => bfsOfGraph(input.length, input)
+)

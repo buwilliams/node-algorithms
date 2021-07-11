@@ -1,11 +1,17 @@
-# Algorithms in node.js
+# Algorithms
 
 [Top 10 algorithms in Interview Questions from GeeksForFeeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions)
+
+## Run tests
+
+```bash
+> npx ts-node ./1_graph/01_breadth_first_search_BFS.ts
+```
 
 ## Contents
 
 1. Graph
-    1. [Breadth First Search (BFS)](1_graph/01_breadth_first_search_BFS.js)
+    1. [Breadth First Search (BFS)](1_graph/01_breadth_first_search_BFS.ts)
     2. Depth First Search (DFS)
     3. Shortest Path from source to all vertices **Dijkstra**
     4. Shortest Path from every vertex to every other vertex **Floyd Warshall**

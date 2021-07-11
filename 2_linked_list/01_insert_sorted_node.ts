@@ -30,7 +30,7 @@ function sortedInsert(newItem: Item) {
     }
 }
 
-function traverseLinkedList(current: Item | null) {
+function getData(current: Item | null): number[] {
     let data = []
     while (current != null) {
         data.push(current.data)
@@ -52,7 +52,7 @@ test([
             sortedInsert(new Item(1));
             sortedInsert(new Item(2));
             sortedInsert(new Item(4));
-            return traverseLinkedList(head)
+            return getData(head)
         }
     },
     {
@@ -63,7 +63,7 @@ test([
             sortedInsert(new Item(3));
             sortedInsert(new Item(2));
             sortedInsert(new Item(1));
-            return traverseLinkedList(head)
+            return getData(head)
         }
     },
     {
@@ -72,7 +72,7 @@ test([
         fn: () => {
             head = null;
             sortedInsert(new Item(1));
-            return traverseLinkedList(head)
+            return getData(head)
         }
     }
 ])

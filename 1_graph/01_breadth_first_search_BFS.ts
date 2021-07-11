@@ -42,16 +42,15 @@ function bfsOfGraph(V: number, adj: any[]) {
     return answer;
 }
 
-test(
-    [
-        {
-            input: [['1', '2', '3' ], [], ['4'], [], []],
-            expected: [0, 1, 2, 3, 4]
-        },
-        {
-            input: [['4', '2'], [], [], [], ['3']],
-            expected: [0, 4, 2, 3]
-        }
-    ],
-    input => bfsOfGraph(input.length, input)
-)
+test([
+    {
+        input: [['1', '2', '3' ], [], ['4'], [], []],
+        expected: [0, 1, 2, 3, 4],
+        fn: input => bfsOfGraph(input.length, input)
+    },
+    {
+        input: [['4', '2'], [], [], [], ['3']],
+        expected: [0, 4, 2, 3],
+        fn: input => bfsOfGraph(input.length, input)
+    }
+])

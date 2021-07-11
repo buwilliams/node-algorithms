@@ -1,6 +1,7 @@
 export interface TestCase {
     input: any,
-    expected: any
+    expected: any,
+    fn: (input: any) => any
 }
 
 export interface TestCases extends Array<TestCase>{}
@@ -9,13 +10,13 @@ function checkEquality(expected: any, actual: any) {
     return JSON.stringify(expected) == JSON.stringify(actual);
 }
 
-export default function test(tests: TestCases, fn: (input: any) => any) {
+export default function test(tests: TestCases) {
     let passAll = true;
 
     for(let i=0; i<tests.length; i++) {
         let test = tests[i];
         let testNumber = i + 1;
-        let actual = fn(test.input);
+        let actual = test.fn(test.input);
         let pass = checkEquality(test.expected, actual);
         if(passAll) passAll = pass;
         console.log(`Test ${testNumber}:`, pass ? 'pass': 'fail', test.expected);

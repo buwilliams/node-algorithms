@@ -22,7 +22,7 @@
     9. Boggle (Find all possible words in a board of characters)
     10. Bridges in a Graph
 2. Linked List
-    1. Insertion of a node in Linked List (On the basis of some constraints)
+    1. [Insertion of a node in Linked List (On the basis of some constraints)](./2_linked_list/01_insert_sorted_node.ts)
     2. Delete a given node in Linked List (under given constraints)
     3. Compare two strings represented as linked lists
     4. Add Two Numbers Represented By Linked Lists
